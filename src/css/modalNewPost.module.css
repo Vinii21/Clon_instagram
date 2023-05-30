@@ -1,0 +1,66 @@
+.container--modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.647);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container--modal span{
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    top: 10px;
+    right: 3px;
+}
+
+.container--modal span svg{
+    cursor: pointer;
+}
+
+.container--modal-info {
+    background-color: #262626;
+    width: 300px;
+    height: 300px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container--modal-info h1 {
+    width: 100%;
+    border-bottom: 1px solid #4c4c4cc9;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.container--modal-info p {
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.container--modal-info button {
+    position: relative;
+    padding: 5px;
+    height: 30px;
+    width: 200px;
+    color: #fff;
+    background-color: #0095f6;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.container--modal-info button:hover {
+    background-color: #026fb7;
+}
