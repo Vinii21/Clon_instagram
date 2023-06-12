@@ -1,4 +1,5 @@
-import style from "../css/search.module.css"
+/* import style from "../css/search.module.css" */
+import style from "../css/home.module.css"
 
 const Search = () => {
     return (

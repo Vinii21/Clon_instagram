@@ -9,10 +9,12 @@ const Perfil = () => {
     return (
         <div>
             <NavProfile />
-            <Profile />
-            <Histories />
-            <NavInfo />
-            <Photos />
+            <div className="main">
+                <Profile />
+                <Histories />
+                <NavInfo />
+                <Photos />
+            </div>
             <Menu />
         </div>
     );

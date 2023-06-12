@@ -1,10 +1,14 @@
+import style from "../css/profile.module.css"
+
 const Photos = () => {
     return (
-       <div>
-            <img src="" alt="Publicacion" />
-            <svg></svg>
-            <div>
-                
+       <div className={style["container--photos"]}>
+            <div className={style["container--photos-photo"]}>
+                <img src="test.jpg" alt="Publicacion" />
+                <svg></svg>
+                <div className={style["container--photos-photo-icons"]}>
+                    
+                </div>
             </div>
        </div> 
     );

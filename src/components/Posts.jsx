@@ -1,4 +1,4 @@
-import style from "../css/posts.module.css"
+import style from "../css/home.module.css"
 
 const Posts = () => {
     return (

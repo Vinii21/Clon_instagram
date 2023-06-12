@@ -1,4 +1,4 @@
-import style from "../css/menu.module.css"
+import style from "../css/home.module.css"
 import { useDispatch, useSelector } from "react-redux";
 import { setShowModal } from "../store/slice/showModal.slice"
 import { useNavigate } from "react-router-dom";

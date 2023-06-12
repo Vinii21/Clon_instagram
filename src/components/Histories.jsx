@@ -1,4 +1,4 @@
-import style from "../css/histories.module.css"
+import style from "../css/home.module.css"
 
 const Histories = () => {
     return (
