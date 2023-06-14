@@ -8,7 +8,7 @@ import style from "../css/chats.module.css"
 const Chats = () => {
     return (
         <>
-            <NavChats />
+            <NavChats action={true}/>
             <InputSearch styleClass={style["container--input"]}/>
             <Histories />
             <Messanges />

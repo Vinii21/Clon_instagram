@@ -5,6 +5,7 @@ import Perfil from "./pages/Perfil.page"
 import ModalNewPost from "./components/ModalNewPost";
 import { useSelector } from "react-redux";
 import Chats from './pages/Chats';
+import Conversation from './pages/Conversation';
 
 function App() {
   const showModal = useSelector(state=>state.showModal)
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<Home />}/>
         <Route path='/perfil' element={<Perfil/>}/>
         <Route path='/direct' element={<Chats/>}/>
+        <Route path='/direct/chat' element={<Conversation/>}/>
       </Routes>
     </BrowserRouter>
   )
