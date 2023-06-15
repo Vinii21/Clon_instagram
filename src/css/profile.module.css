@@ -99,6 +99,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 3px;
+    justify-content: center;
 }
 
 .container--photos-photo {
