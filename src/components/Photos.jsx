@@ -10,6 +10,27 @@ const Photos = () => {
                     
                 </div>
             </div>
+            <div className={style["container--photos-photo"]}>
+                <img src="test.jpg" alt="Publicacion" />
+                <svg></svg>
+                <div className={style["container--photos-photo-icons"]}>
+                    
+                </div>
+            </div>
+            <div className={style["container--photos-photo"]}>
+                <img src="test.jpg" alt="Publicacion" />
+                <svg></svg>
+                <div className={style["container--photos-photo-icons"]}>
+                    
+                </div>
+            </div>
+            <div className={style["container--photos-photo"]}>
+                <img src="test.jpg" alt="Publicacion" />
+                <svg></svg>
+                <div className={style["container--photos-photo-icons"]}>
+                    
+                </div>
+            </div>
        </div> 
     );
 }
