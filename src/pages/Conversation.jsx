@@ -1,11 +1,12 @@
 import Comunication from "../components/Comunication";
-import InputSendMessange from "../components/InputSendMessange";
 import NavChats from "../components/NavChats";
+import InputSendMessange from "../components/InputSendMessange";
+import style from "../css/chats.module.css"
 
 const Conversation = () => {
     return (
         <>
-            <NavChats action={false} row={true}/>
+            <NavChats action={false} row={true} styleClass={style["conversation-nav"]}/>
             <div className="main">
                 <Comunication />
             </div>

@@ -1,28 +1,31 @@
+import style from "../css/chats.module.css"
+
+
 const Comunication = () => {
-    const example = ["Hola, Cómo estás?", "Muy bien, y tú?", <img src="/test.jpg" width="100"/>, "Wow, no sabía que estabas en US"]
+    const example = [["Hola, Cómo estás?", "flex-start"], ["Muy bien, y tú?", "flex-end"], [<img src="/test.jpg" width="100"/>, "flex-start"], ["Wow, no sabía que estabas en US", "flex-end"]]
 
     return (
-        <div>
-            <div>
-                <img src="" alt="perfil" />
+        <div className={style["container--conversation"]}>
+            <div className={style["container--conversation_messanges"]}>
+            <div className={style["container--conversation_info"]}>
+                <img src="/test.jpg" alt="perfil" />
                 <span>Nombre</span>
-                <div>
-                    <span>username <i className='bx bxs-circle'></i> Instagram</span>
-                    <span>71 seguidores <i className='bx bxs-circle'></i> 6 publicaciones</span>
+                <div className={style["container--conversation_info_details"]}>
+                    <div>username <i className='bx bxs-circle'></i> Instagram</div>
+                    <div>71 seguidores <i className='bx bxs-circle'></i> 6 publicaciones</div>
                 </div>
                 <button>Ver Perfil</button>
             </div>
-            <div>
                 {
                     example.map(m=>{
                         return (
-                            <div>
-                                {m}
+                            <div className={style["messange"]} style={{justifyContent: m[1]}}>
+                                {m[0]}
                             </div>
                         )
                     })
                 }
-            </div>
+            </div> 
         </div>
     );
 }

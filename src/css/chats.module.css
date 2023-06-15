@@ -1,9 +1,18 @@
+body {
+    overflow: hidden;
+}
+
 .container--nav {
     width: 100%;
     height: 60px;
     padding: 20px 20px 0px 20px;
     display: flex;
     justify-content: space-between;
+}
+
+.container--nav_name {
+    display: flex;
+    align-items: center;
 }
 
 .container--nav_name span svg {
@@ -88,4 +97,115 @@
     justify-content: center;
     align-items: flex-start;
     margin-left: 10px;
+}
+
+/* Componente Comunication =============================================================== */
+
+.conversation-nav {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    padding: 10px;
+    z-index: 100;
+    background-color: #000;
+}
+
+.container--nav_name i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.container--nav_name img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.container--conversation {
+    width: 100%;
+    position: relative;
+    top: -40px;
+    height: 80vh;
+}
+
+.container--conversation_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container--conversation_info img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.container--conversation_info_details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container--conversation_info_details spam {
+    margin: 0px 10px;
+}
+
+.container--conversation_info button {
+    padding: 3px 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container--conversation_messanges {
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    overflow: auto;
+    border: 1px solid;
+}
+
+.messange {
+    width: 100%;
+    background-color: #119eda;
+    border-bottom: 1px solid orange;
+    display: flex;
+    justify-content: center;
+}
+
+/* Componente InputSendMenssange =============================================================== */
+
+.container--inputSend {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #cbced1;
+    color: #000;
+    position: absolute;
+    bottom: -20px;
+}
+
+.container--inputSend textarea {
+    border-radius: inherit;
+    border: none;
+    width: 80%;
+    outline: none;
+    background-color: transparent;
+    resize: none;
+    padding: 5px;
+}
+
+.container--inputSend button {
+    display: none;
+}
+
+.container--inputSend_icons {
+    margin: 0 5px;
 }

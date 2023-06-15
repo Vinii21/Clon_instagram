@@ -1,16 +1,19 @@
 import style from "../css/chats.module.css"
 import { useNavigate } from "react-router-dom";
 
-const NavChats = ({action, row}) => {
+const NavChats = ({action, row, styleClass}) => {
 
     const navigate = useNavigate()
 
     return (
-        <nav className={style["container--nav"]}>
+        <nav className={styleClass}>
             <div className={style["container--nav_name"]}>
                 {
                     row &&
-                    <i className='bx bx-arrow-back' onClick={()=>navigate("/direct")}></i>
+                    <>
+                        <i className='bx bx-arrow-back' onClick={()=>navigate("/direct")}></i>
+                        <img src="/test.jpg" alt="" width="50"/>
+                    </>
                 }
                 <span>name
                     {   action &&
