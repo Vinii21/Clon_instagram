@@ -1,3 +1,7 @@
+:root {
+    --dimension-photo: 110.67px;
+}
+
 .container--nav {
     width: 100%;
     height: 60px;
@@ -104,8 +108,8 @@
 
 .container--photos-photo {
     position: relative;
-    width: 101.67px;
-    height: 101.67px;
+    width: var(--dimension-photo);
+    height: var(--dimension-photo);
 }
 
 .container--photos-photo img {
@@ -120,8 +124,8 @@
     top: 0;
     z-index: 100;
     background-color: transparent;
-    width: 101.67px;
-    height: 101.67px;
+    width: var(--dimension-photo);
+    height: var(--dimension-photo);
     cursor: pointer;
 }
 
