@@ -1,12 +1,21 @@
 import style from "../css/chats.module.css"
+import { useEffect, useRef } from "react";
 
 
 const Comunication = () => {
-    const example = [["Hola, Cómo estás?", "flex-start"], ["Muy bien, y tú?", "flex-end"], [<img src="/test.jpg" width="100"/>, "flex-start"], ["Wow, no sabía que estabas en US", "flex-end"]]
+
+    const containerRef = useRef(null);
+
+    useEffect(()=>{
+        const containerMessanges = containerRef.current;
+        containerMessanges.scrollTop = containerMessanges.scrollHeight
+    }, [containerRef])
+
+    const example = [["Hola, Cómo estás?", "flex-start", true], ["Muy bien, y tú?", "flex-end", true], ["/test.jpg", "flex-start", false], ["Wow, no sabía que estabas en US", "flex-end", true], ["Si, desde hace una semana", "flex-start", true]]
 
     return (
-        <div className={style["container--conversation"]}>
-            <div className={style["container--conversation_messanges"]}>
+        <div className={style["container--conversation"]} >
+            <div className={style["container--conversation_messanges"]} ref={containerRef}>
             <div className={style["container--conversation_info"]}>
                 <img src="/test.jpg" alt="perfil" />
                 <span>Nombre</span>
@@ -19,8 +28,13 @@ const Comunication = () => {
                 {
                     example.map(m=>{
                         return (
-                            <div className={style["messange"]} style={{justifyContent: m[1]}}>
-                                {m[0]}
+                            <div key={m} className={style["messange"]} style={{justifyContent: m[1]}}>
+                                {
+                                    m[2] ?
+                                        <div className={style["messange--string"]}>{m[0]}</div>
+                                        :
+                                        <img src={m[0]} alt="" width="100"/>
+                                }
                             </div>
                         )
                     })
