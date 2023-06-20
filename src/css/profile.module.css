@@ -104,6 +104,7 @@
     flex-wrap: wrap;
     gap: 3px;
     justify-content: center;
+    margin-bottom: 70px;
 }
 
 .container--photos-photo {

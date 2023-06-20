@@ -13,14 +13,14 @@ const Messanges = () => {
             </div>
             <div className={style["container--messanges_chats--container"]}>
                 {
-                    [0,0,0,0,0,0,0].map(n=>{
+                    [0,0,0,0,0,0,0].map((n,i)=>{
                         return(
-                            <div className={style["chats--container_chat"]} onClick={()=>navigate("/direct/chat")}>
-                            <img src="/test.jpg" alt="foto" width="80"/>
-                            <div className={style["chats--container_chat_info"]}>
-                                <span>Nombre</span>
-                                <span>Activo(a) hace 34 min</span>
-                            </div>    
+                            <div key={i} className={style["chats--container_chat"]} onClick={()=>navigate("/direct/chat")}>
+                                <img src="/test.jpg" alt="foto" width="80"/>
+                                <div className={style["chats--container_chat_info"]}>
+                                    <span>Nombre</span>
+                                    <span>Activo(a) hace 34 min</span>
+                                </div>    
                             </div>
                         )
                     })

@@ -9,6 +9,7 @@ import Conversation from './pages/Conversation';
 
 function App() {
   const showModal = useSelector(state=>state.showModal)
+console.log(showModal)
 
   return (
     <BrowserRouter>

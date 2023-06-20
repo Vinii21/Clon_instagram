@@ -26,9 +26,9 @@ const Comunication = () => {
                 <button>Ver Perfil</button>
             </div>
                 {
-                    example.map(m=>{
+                    example.map((m,i)=>{
                         return (
-                            <div key={m} className={style["messange"]} style={{justifyContent: m[1]}}>
+                            <div key={i} className={style["messange"]} style={{justifyContent: m[1]}}>
                                 {
                                     m[2] ?
                                         <div className={style["messange--string"]}>{m[0]}</div>
