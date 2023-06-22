@@ -1,6 +1,9 @@
 import style from "../css/chats.module.css"
+import { useState } from "react"
 
 const NewChat = ({activeNewChat, setActiveNewChat}) => {
+
+    const [btnActive, setBtnActive] = useState(false)
 
     const active = style["active"]
     const container = style["containerNewChat"]
@@ -19,17 +22,22 @@ const NewChat = ({activeNewChat, setActiveNewChat}) => {
                 </div>
             </nav>
             <div className={style["containerNewChat_suggestions"]}>
-                <h6>Sugerencias</h6>
-                <div>
-                    <div>
-                        <img src="/test.jpg" alt="" width="50" style={{ borderRadius: "50%" }} />
-                        <label htmlFor="option">Nombre</label>
-                        <input type="radio" id="option" name="option" />
+                <span>Sugerencias</span>
+                <div className={style["containerNewChat_suggestions_options"]}>
+                    <div className={style["containerNewChat_suggestions_options_option"]}>
+                        <div>
+                            <img src="/test.jpg" alt=""/>
+                            <span>Nombre</span>
+                        </div>
+                        <label className={style["label"]}>
+                            <input type="radio" onClick={()=>setBtnActive(!btnActive)} onChange={()=>setBtnActive(!btnActive)} checked={btnActive} id="option" name="option" />
+                            <span className={style["label_checkmark"]}></span> 
+                        </label>
                     </div>
                 </div>
             </div>
             <div className={style["containerNewChat_button"]}>
-                <button onClick={()=>setP(!p)}>Crear Chat</button>
+                <button disabled={!btnActive} style={btnActive ? {opacity: "1"} : {opacity:".5", cursor: "default"}} onClick={()=>console.log("hola")}>Crear Chat</button>
             </div>
         </div>
     );

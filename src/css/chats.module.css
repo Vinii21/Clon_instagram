@@ -234,8 +234,9 @@
     left: 100px;
     opacity: 0;
     z-index: -1;
-    background: #cbced1;
+    background-color: #000;
     transition: all .1s linear;
+    overflow: scroll;
 }
 
 .active {
@@ -250,6 +251,8 @@
     width: 100%;
     background-color: #000;
     position: fixed;
+    font-size: 18px;
+    z-index: 2;
 }
 
 .containerNewChat_nav div:nth-child(1) {
@@ -261,6 +264,8 @@
 
 .containerNewChat_nav div:nth-child(1) i {
     margin-right: 10px;
+    cursor: pointer;
+    font-size: 40px;
 }
 
 .containerNewChat_nav div:nth-child(2) {
@@ -274,7 +279,8 @@
     border: none;
     border-radius: 20px;
     padding: 5px;
-    width: 60%;
+    width: 80%;
+    height: 40px;
     margin-top: 5px;
     outline: none;
 }
@@ -304,5 +310,100 @@
 }
 
 .containerNewChat_suggestions {
-    padding-top: 120px;
+    padding-top: 130px;
+    padding-bottom: 50px;
 }
+
+.containerNewChat_suggestions > span {
+    display: inline-block;
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.containerNewChat_suggestions_options {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.containerNewChat_suggestions_options_option {
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerNewChat_suggestions_options_option div {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.containerNewChat_suggestions_options_option div img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 20px;
+}
+
+.label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.label input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.label_checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.label:hover input~.label_checkmark {
+    background-color: #ccc;
+}
+
+.label input:checked~.label_checkmark {
+    background-color: #72bcdc;
+}
+
+.label_checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+.label input:checked~.label_checkmark:after {
+    display: block;
+}
+
+.label .label_checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+
