@@ -2,7 +2,7 @@ import style from "../css/home.module.css"
 
 const Posts = () => {
     return (
-        <>
+        <div className={style["posts"]}>
             <div className={style["contianer--post"]}>
                 <div className={style["container--post-header"]}>
                     <div>
@@ -43,7 +43,7 @@ const Posts = () => {
                     <span>Ver los 50 Comentarios</span>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
  

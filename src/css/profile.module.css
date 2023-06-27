@@ -1,5 +1,7 @@
 :root {
-    --dimension-photo: 110.67px;
+    --dimension-photo: 114.67px;
+    --dimension-photo_tablet: 145.67px;
+    --dimension-photo_600: 190px;
 }
 
 .container--nav {
@@ -11,12 +13,15 @@
     align-items: center;
     position: fixed;
     background: #000000;
+    z-index: 100;
 }
 
 .container--nav span svg{
     transform: rotate(180deg);
     margin-left: 10px;
 }
+
+/* Contenedor de profile ================================================================ */
 
 .container--profile {
     width: 100%;
@@ -132,5 +137,84 @@
 
 .container--photos-photo-icons:hover {
     background-color: #13111157;
+}
+
+@media only screen and (min-width: 469px) {
+    .container--nav {
+        height: 90px;
+    }
+
+    .container--nav span {
+        font-size: 25px;
+    }
+
+    .container--profile_sttings--name {
+        font-size: 20px;
+    }
+
+    .container--profile_sttings {
+        width: 250px;
+    }
+
+    .container--profile_sttings button {
+        font-size: 17px;
+    }
+
+    .container--photos-photo {
+        width: var(--dimension-photo_tablet);
+        height: var(--dimension-photo_tablet);
+    }
+
+    .container--photos-photo-icons {
+        width: var(--dimension-photo_tablet);
+        height: var(--dimension-photo_tablet);
+    }
+}
+
+@media only screen and (min-width: 592px) {
+
+    .container--profile {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .container--profile_sttings {
+        width: 340px;
+        flex-direction: row;
+        position: relative;
+    }
+
+    .container--profile_sttings--name {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        z-index: -1;
+    }
+
+    .container--profile_sttings--name span{
+        order: 1;
+    }
+    
+    .container--profile_sttings button {
+        width: 150px;
+        margin: 0 auto;
+        height: 30px;
+        padding: 0;
+    }
+
+    .container--profile_sttings--name svg {
+        order: 3;
+    }
+
+
+    .container--photos-photo {
+        width: var(--dimension-photo_600);
+        height: var(--dimension-photo_600);
+    }
+
+    .container--photos-photo-icons {
+        width: var(--dimension-photo_600);
+        height: var(--dimension-photo_600);
+    }
 }
 

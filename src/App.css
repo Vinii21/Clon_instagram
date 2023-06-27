@@ -15,3 +15,35 @@ body {
   overflow: hidden;
 }
 
+.menu {
+  display: none;
+}
+
+@media only screen and (min-width: 469px) {
+  .main {
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 930px) {
+  .home{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 90px auto;
+    border: 2px solid green;
+  }
+  .main_home{
+    padding-top: 20px;
+    overflow: hidden;
+    border: 2px solid red;
+    grid-column: 2 / 3;
+    grid-row: 2;
+  }
+  .menu {
+    display: inline-block;
+    grid-column: 1 / 2;
+    grid-row: 2;
+    border: 2px solid orange;
+  }
+}
+
