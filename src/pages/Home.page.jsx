@@ -12,9 +12,9 @@ const Home = () => {
                 <Histories />
                 <Posts />
             </div>
-{/*             <div className="menu">
+            <div className="menu">
                 <MenuDesktop />
-            </div> */}
+            </div>
             <Menu/>
         </div>
     );

@@ -7,6 +7,7 @@
     background-color: #000;
     height: 60px;
     border-bottom: 1px solid #b9b3b3;
+    z-index: 200;
 }
 
 .container--search-input {
@@ -181,8 +182,9 @@
         display: none;
     }
     .container--nav_desktop {
-        width: 100%;
-        height: auto;
+        width: 200px;
+        height: 100vh;
+        background: #a8a8a8;
     }
 
 }

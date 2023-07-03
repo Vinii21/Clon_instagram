@@ -28,7 +28,7 @@ body {
 @media only screen and (min-width: 930px) {
   .home{
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 200px 1fr 250px;
     grid-template-rows: 90px auto;
     border: 2px solid green;
   }
@@ -40,6 +40,8 @@ body {
     grid-row: 2;
   }
   .menu {
+    position: fixed;
+    padding-top: 85px;
     display: inline-block;
     grid-column: 1 / 2;
     grid-row: 2;
